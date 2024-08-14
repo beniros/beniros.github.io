@@ -107,6 +107,22 @@ section {
   }
 }
 
+@media (max-width: 768px) {
+  .section-header h2:before,
+  .section-header h2:after {
+    display: block; /* Changes display to block, putting them on separate lines */
+    margin: 0 auto; /* Centers the lines */
+  }
+
+  .section-header h2:before {
+    margin-bottom: 10px; /* Adds spacing below the before element */
+  }
+
+  .section-header h2:after {
+    margin-top: 10px; /* Adds spacing above the after element */
+  }
+}
+
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
@@ -1117,7 +1133,7 @@ section {
 .alt-services .img-bg {
   background-size: cover;
   background-position: center center;
-  min-height: 400px;
+  min-height: 260px;
 }
 
 .alt-services h3 {

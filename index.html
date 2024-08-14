@@ -48,15 +48,12 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>UpConstruction<span>.</span></h1>
+        <h1>Beni & Remus Construction<span>.</span></h1>
       </a>
 
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="FAQ.html">FAQ</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -70,8 +67,8 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
-            <h2 data-aos="fade-down">Welcome to <span>UpConstruction</span></h2>
-            <p data-aos="fade-up">Who are we?</p>
+            <h2 data-aos="fade-down">Welcome to<br><span>Beni & Remus Construction</span></h2>
+            <p data-aos="fade-up">Discover premium external wall insulation services serving Monaghan, Louth, Cavan, Meath, and Dublin. Our trusted expert team is dedicated to providing solutions reducing heating costs, increasing the longevity of your property and enhancing your home's energy efficiency and comfort.</p>
             <a data-aos="fade-up" data-aos-delay="200" href="#alt-services" class="btn-get-started">Get a quick estimate now</a>
           </div>
         </div>
@@ -132,7 +129,7 @@
               </div>
               <h3>Free custom quotation</h3>
               <p>Following our assessment, we'll provide a tailored quotation at no cost, designed to offer you the best solution.</p>
-              <a href="service-details.html" class="readmore stretched-link">Get an initial estimate <i
+              <a href="#alt-services" class="readmore stretched-link">Get an initial estimate <i
                   class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
@@ -154,17 +151,16 @@
       </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Alt Services Section ======= -->
     <section id="alt-services" class="alt-services">
       <div class="container" data-aos="fade-up">
-    
+      
         <div class="row justify-content-around gy-4">
           <div class="col-lg-6 img-bg" style="background-image: url(assets/img/alt-services.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
-    
+      
           <div class="col-lg-5 d-flex flex-column justify-content-center">
-            <h3>Get Your Free Instant Estimate</h3>
+            <h3>Get Your Instant Estimate</h3>
             <p>Enter the size of the area in square meters to calculate the estimated cost for our services.</p>
-    
+      
             <form class="estimate-form" data-aos="fade-up" data-aos-delay="100">
               <div class="mb-3">
                 <label for="squareMeters" class="form-label">Square Meters:</label>
@@ -172,9 +168,9 @@
               </div>
               <button type="button" class="btn btn-primary custom-button" onclick="calculateEstimate()">Calculate</button>
             </form>
-    
-            <p id="estimateResult" style="display:none; margin-top: 20px;">Estimated Price: <span id="price"></span></p>
-    
+      
+            <p id="estimateResult" style="margin-top: 20px;">Estimated Price: <span id="price"></span><span id="loadingSpinner" class="spinner-border text-primary" role="status" style="display:none;"><span class="sr-only">Loading...</span></span></p>
+      
             <style>
               .custom-button {
                 background-color: white;
@@ -186,33 +182,45 @@
                 color: #333;
                 border: 1px solid #ccc;
               }
+              .spinner-border {
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-left: 10px;
+              }
             </style>
-    
+      
             <script>
               function calculateEstimate() {
                 const maxArea = 5000;
                 const rate = 160;
                 let squareMeters = document.getElementById('squareMeters').value;
-                let estimateResult = document.getElementById('estimateResult');
                 let price = document.getElementById('price');
-    
+                let loadingSpinner = document.getElementById('loadingSpinner');
+      
                 if (squareMeters > maxArea) {
-                  price.textContent = 'Please input a value less than 5000 square meters.';
-                  estimateResult.style.display = 'block';
+                  price.textContent = ' Please input a value less than 5000 square meters.';
+                  loadingSpinner.style.display = 'none';
                   return;
                 }
-    
-                let estimate = squareMeters * rate;
-                price.textContent = '€' + estimate.toLocaleString('en-EU');
-                estimateResult.style.display = 'block';
+      
+                price.textContent = ''; // Clear previous results
+                loadingSpinner.style.display = 'inline-block'; // Show loading spinner
+      
+                setTimeout(() => {
+                  let estimate = squareMeters * rate;
+                  price.textContent = '€' + estimate.toLocaleString('en-EU');
+                  loadingSpinner.style.display = 'none'; // Hide spinner
+                }, 1000); // Delay for 1 second to simulate calculation/loading
               }
             </script>
-    
+      
           </div>
         </div>
-    
+      
       </div>
     </section><!-- End Alt Services Section -->
+    
     
 
     <!-- ======= Features Section ======= -->
