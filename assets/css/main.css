@@ -900,6 +900,20 @@ section {
   margin-bottom: 0;
 }
 
+.responsive-image {
+  display: none;
+}
+
+/* Media query for screens with a minimum width of 992px */
+@media (min-width: 992px) {
+  .responsive-image {
+      display: block; /* This will show the image */
+      height: 500px;
+      width: 100%;
+      object-fit: cover;
+  }
+}
+
 /*--------------------------------------------------------------
 # Our Projects Section
 --------------------------------------------------------------*/
