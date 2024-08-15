@@ -300,6 +300,17 @@ section {
 /*--------------------------------------------------------------
 # Desktop Navigation
 --------------------------------------------------------------*/
+.desktop-only {
+  display: none;
+}
+
+/* Media query for desktop screens */
+@media (min-width: 768px) {
+  .desktop-only {
+      display: block;
+  }
+}
+
 @media (min-width: 1280px) {
   .navbar {
     padding: 0;
