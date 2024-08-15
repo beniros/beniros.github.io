@@ -1015,7 +1015,7 @@ section {
 .projects .portfolio-content .portfolio-info .preview-link,
 .projects .portfolio-content .portfolio-info .details-link {
   position: absolute;
-  left: calc(50% - 40px);
+  left: calc(50%);
   font-size: 26px;
   top: calc(50% - 14px);
   color: #fff;
@@ -2629,7 +2629,7 @@ section {
   background: url("../img/footer-bg.jpg") top center no-repeat;
   background-size: cover;
   font-size: 14px;
-  padding: 80px 0 60px 0;
+  padding: 10px 0 10px 0;
   position: relative;
 }
 
@@ -2721,7 +2721,7 @@ section {
 }
 
 .footer .footer-legal .copyright {
-  padding-top: 30px;
+  padding-top: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
