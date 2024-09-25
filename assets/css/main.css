@@ -2751,7 +2751,7 @@ section {
 }
 
 .carousel-background {
-  background-image: url('../img/hero-carousel/bg1.jpg'); /* Adjust the path as needed */
+  background-image: url('../img/hero-carousel/bg.jpg'); /* Adjust the path as needed */
   background-size: cover;
   background-position: center;
 }
