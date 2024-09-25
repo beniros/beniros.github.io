@@ -2723,3 +2723,29 @@ section {
 .footer .footer-legal .credits a {
   color: var(--color-primary);
 }
+
+
+
+
+
+
+
+
+
+
+.short-description {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .full-description {
+      display: none;
+  }
+  .short-description {
+      display: block;
+  }
+  .img-logo {
+    margin-bottom: 70px;
+    scale: 1.5;
+  }
+}
