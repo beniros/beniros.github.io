@@ -2749,3 +2749,16 @@ section {
     scale: 1.5;
   }
 }
+
+.carousel-background {
+  background-image: url('../img/hero-carousel/bg.jpg'); /* Adjust the path as needed */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Override background for mobile */
+@media (max-width: 768px) {
+  .carousel-background {
+    background-image: url('../img/hero-carousel/bg.jpg'); /* Adjust the path as needed */
+  }
+}

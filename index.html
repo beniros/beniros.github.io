@@ -74,7 +74,7 @@
 
     <div id="hero-carousel" class="carousel slide">
 
-      <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/bg.jpg)">
+      <div class="carousel-item active carousel-background">
       </div>
 
     </div>
@@ -144,7 +144,7 @@
       
           <div class="col-lg-5 d-flex flex-column justify-content-center">
             <h3>Get Your Instant Estimate</h3>
-            <p>Enter the size of the area in square meters to calculate the estimated cost for our services (including material costs).</p>
+            <p>Enter the size of the area in square meters to calculate the estimated cost for our services.</p>
       
             <form class="estimate-form" data-aos="fade-up" data-aos-delay="100">
               <div class="mb-3">
@@ -194,7 +194,7 @@
       
                 setTimeout(() => {
                   let estimate = squareMeters * rate;
-                  price.textContent = '€' + estimate.toLocaleString('en-EU');
+                  price.textContent = '€' + estimate.toLocaleString('en-EU') + ' (including material costs)';
                   loadingSpinner.style.display = 'none'; // Hide spinner
                 }, 1000); // Delay for 1 second to simulate calculation/loading
               }
