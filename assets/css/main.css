@@ -2751,7 +2751,7 @@ section {
 }
 
 .carousel-background {
-  background-image: url('../img/hero-carousel/bg.jpg'); /* Adjust the path as needed */
+  background-image: url('../img/hero-carousel/bg7.png'); /* Adjust the path as needed */
   background-size: cover;
   background-position: center;
 }
@@ -2759,6 +2759,6 @@ section {
 /* Override background for mobile */
 @media (max-width: 768px) {
   .carousel-background {
-    background-image: url('../img/hero-carousel/bg.png'); /* Adjust the path as needed */
+    background-image: url('../img/hero-carousel/bg71.png'); /* Adjust the path as needed */
   }
 }
